@@ -1,7 +1,8 @@
 import tensorflow as tf
 rnn_cell = tf.nn.rnn_cell
+# from tensorflow.models.rnn import rnn_cell
 
-class NIGLSTMCell(rnn_cell.RNNCell):
+class VanillaLSTMCell(rnn_cell.RNNCell):
     def __init__(self, num_blocks):
         self._num_blocks = num_blocks
 
@@ -25,26 +26,31 @@ class NIGLSTMCell(rnn_cell.RNNCell):
                 return tf.get_variable(name, shape, initializer=initializer, dtype=inputs.dtype)
 
             c_prev, y_prev = tf.split(1, 2, state)
+            print("y_prev shape is ", y_prev.get_shape())
 
             W_z = get_variable("W_z", [self.input_size, self._num_blocks])
+            W_i = get_variable("W_i", [self.input_size, self._num_blocks])
             W_f = get_variable("W_f", [self.input_size, self._num_blocks])
             W_o = get_variable("W_o", [self.input_size, self._num_blocks])
 
             R_z = get_variable("R_z", [self._num_blocks, self._num_blocks])
+            R_i = get_variable("R_i", [self._num_blocks, self._num_blocks])
             R_f = get_variable("R_f", [self._num_blocks, self._num_blocks])
             R_o = get_variable("R_o", [self._num_blocks, self._num_blocks])
 
             b_z = get_variable("b_z", [1, self._num_blocks])
+            b_i = get_variable("b_i", [1, self._num_blocks])
             b_f = get_variable("b_f", [1, self._num_blocks])
             b_o = get_variable("b_o", [1, self._num_blocks])
 
+            p_i = get_variable("p_i", [self._num_blocks])
             p_f = get_variable("p_f", [self._num_blocks])
             p_o = get_variable("p_o", [self._num_blocks])
 
             g = h = tf.tanh
 
             z = g(tf.matmul(inputs, W_z) + tf.matmul(y_prev, R_z) + b_z)
-            i = 1.0
+            i = tf.sigmoid(tf.matmul(inputs, W_i) + tf.matmul(y_prev, R_i) + tf.mul(c_prev, p_i) + b_i)
             f = tf.sigmoid(tf.matmul(inputs, W_f) + tf.matmul(y_prev, R_f) + tf.mul(c_prev, p_f) + b_f)
             c = tf.mul(i, z) + tf.mul(f, c_prev)
             o = tf.sigmoid(tf.matmul(inputs, W_o) + tf.matmul(y_prev, R_o) + tf.mul(c, p_o) + b_o)
