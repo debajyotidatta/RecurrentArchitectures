@@ -26,7 +26,6 @@ class VanillaLSTMCell(rnn_cell.RNNCell):
                 return tf.get_variable(name, shape, initializer=initializer, dtype=inputs.dtype)
 
             c_prev, y_prev = tf.split(1, 2, state)
-            print("y_prev shape is ", y_prev.get_shape())
 
             W_z = get_variable("W_z", [self.input_size, self._num_blocks])
             W_i = get_variable("W_i", [self.input_size, self._num_blocks])
