@@ -1,6 +1,5 @@
 import tensorflow as tf
 rnn_cell = tf.nn.rnn_cell
-# from tensorflow.models.rnn import rnn_cell
 
 class VanillaLSTMCell(rnn_cell.RNNCell):
     def __init__(self, num_blocks):

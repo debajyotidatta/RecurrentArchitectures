@@ -1,6 +1,5 @@
 import tensorflow as tf
 rnn_cell = tf.nn.rnn_cell
-# from tensorflow.models.rnn import rnn_cell
 
 class GruCell(rnn_cell.RNNCell):
     def __init__(self, num_blocks):
@@ -26,7 +25,6 @@ class GruCell(rnn_cell.RNNCell):
                 return tf.get_variable(name, shape, initializer=initializer, dtype=inputs.dtype)
 
             y_prev, y_prev = tf.split(1, 2, state)
-            print("y_prev shape is ", y_prev.get_shape())
 
             W_z = get_variable("W_z", [self.input_size, self._num_blocks])
             W_r = get_variable("W_i", [self.input_size, self._num_blocks])

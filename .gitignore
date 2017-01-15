@@ -9,6 +9,7 @@
 *.pyc
 *.pyo
 *~
+*.checkpoint*
 
 # Packages #
 ############
