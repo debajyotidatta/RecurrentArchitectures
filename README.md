@@ -1,6 +1,6 @@
 ### Why this? What is the goal?
 
-The goal of this repository is to write all the recurrent architectures from scratch in tensorflow for learning purposes. This is a Work-In-Progress. I plan to implement some more architectures and publish the results and performances for all of them. The inspiration for this post was the last paragraph of this post: [Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Chris Olah mentioned two papers that did extensive study on recurrent architectures and I wanted to implement all the architectures in these two papers. A short Google search resulted that Jim Flemming already did half the work [here](https://medium.com/jim-fleming/implementing-lstm-a-search-space-odyssey-7d50c3bacf93#.89xd4s9ii), so I decided to implement all the remaining architectures of Jozefowicz's paper. Both these papers are fantastic and worth a read. Feel free to send me a pull request if you spot an error and/or find other papers with recurrent architecture variants. As and when time permits, I will implement them. All the implementations are in Tensorflow (0.12).
+The goal of this repository is to write all the recurrent architectures from scratch in tensorflow for learning purposes. This is a Work-In-Progress. I plan to implement some more architectures and publish the results and performances for all of them. The inspiration for this post was the last paragraph of this post: [Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) Chris Olah mentioned two papers that did extensive study on recurrent architectures and I wanted to implement all the architectures in these two papers. A short Google search resulted that Jim Flemming already did half the work [here](https://medium.com/jim-fleming/implementing-lstm-a-search-space-odyssey-7d50c3bacf93#.89xd4s9ii), so I decided to implement all the remaining architectures of Jozefowicz's paper. (I also updated parts of his code so that all the architectures work in the newest version of tensorflow. Both these papers are fantastic and worth a read. Feel free to send me a pull request if you spot an error and/or find other papers with recurrent architecture variants. As and when time permits, I will implement them. All the implementations are in Tensorflow (0.12).
 
 ### Deep Learning Recurrent Architectures
  -  [LSTM Network Variants](https://medium.com/jim-fleming/implementing-lstm-a-search-space-odyssey-7d50c3bacf93#.89xd4s9ii) This tutorial has a very nice approach to creating variations of LSTM Networks. A good approach to learning how to code a new network architecture and more importantly a methodical approach to understanding the gates in LSTM
@@ -38,3 +38,8 @@ If with a (*) then it was implemented in [LSTM Network Variants](https://medium.
 - __noaf__ (*) : No output activation function
 - __nog__ (*): No output gate
 - __np__ (*): No peephole connections
+
+
+### Instructions
+
+See the jupyter notebook here: https://github.com/debajyotidatta/RecurrentArchitectures/blob/master/Empirical%20Exploration%20of%20Recurrent%20Network%20Architectures.ipynb
