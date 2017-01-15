@@ -26,7 +26,7 @@ class VanillaRNNCell(rnn_cell.RNNCell):
             def get_variable(name, shape):
                 return tf.get_variable(name, shape, initializer=initializer, dtype=inputs.dtype)
 
-            c_prev, y_prev = tf.split(1, 2, state)
+            y_prev, y_prev = tf.split(1, 2, state)
 
             U = get_variable("U", [self.input_size, self._num_blocks])
 
