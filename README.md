@@ -20,17 +20,17 @@ The implementations are not optimal, in the sense, that in the actual implementa
 
 If with a (*) then it was implemented in [LSTM Network Variants](https://medium.com/jim-fleming/implementing-lstm-a-search-space-odyssey-7d50c3bacf93#.89xd4s9ii), else was implemented by me based on [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf) . Also network architectures that I have implemented follow the conventions and syntax of [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf). 
 
-- __mut1.__ : Variant 1 from [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
-- __mut2.__ : Variant 2 from [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
-- __mut3.__ : Variant 3 from [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
-- __vanillaRNN.__ : Just a vanilla RNN Network
-- __gru.__ : Gated Recurrent Unit
-- __cifg.__ (*) : Coupled input-forget gate
-- __fgr.__ (*) : Full Gate Recurrence
-- __lstm.__ (*) : Long Short Term Memory
-- __nfg.__ (*) : No forget gate
-- __niaf.__ (*) : No input activation function
-- __nig.__ (*) : No input gate
-- __noaf.__ (*) : No output activation function
-- __nog.__ (*): No output gate
-- __np.__ (*): No peephole connections
+- __mut1__ : Variant 1 from [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
+- __mut2__ : Variant 2 from [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
+- __mut3__ : Variant 3 from [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf)
+- __vanillaRNN__ : Just a vanilla RNN Network
+- __gru__ : Gated Recurrent Unit
+- __cifg__ (*) : Coupled input-forget gate
+- __fgr__ (*) : Full Gate Recurrence
+- __lstm__ (*) : Long Short Term Memory
+- __nfg__ (*) : No forget gate
+- __niaf__ (*) : No input activation function
+- __nig__ (*) : No input gate
+- __noaf__ (*) : No output activation function
+- __nog__ (*): No output gate
+- __np__ (*): No peephole connections
