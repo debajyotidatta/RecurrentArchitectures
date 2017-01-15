@@ -12,3 +12,13 @@ The implementations are not optimal, in the sense, that in the actual implementa
 ### Other Tutorials with that are also helpful
  - [RNN Network implementation Tensorflow](https://medium.com/@erikhallstrm/hello-world-rnn-83cd7105b767#.qk7xgwwa4) A series of post on implementing recurrent neural network architectures. A good follow up post would be the next article.
  - [Reinforcement Learning](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0#.tpmlehy2p) A fantastic hands-on tutorial on reinforcement learning using the openAI platform.
+
+
+
+
+## Recurrent Architectures Implemented
+
+if with a (*) then it was implemented in [LSTM Network Variants](https://medium.com/jim-fleming/implementing-lstm-a-search-space-odyssey-7d50c3bacf93#.89xd4s9ii), else was implemented by me based on [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf) . Also network architectures that I have implemented follow the conventions and syntax of [Empirical Exploration of Recurrent Network Architectures](http://jmlr.org/proceedings/papers/v37/jozefowicz15.pdf). 
+
+
+- __cifg.__ (*) coupled input-forget gate
